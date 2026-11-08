@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usama Hanif · AI developer</title>
+<meta name="description" content="Usama Hanif, BS Artificial Intelligence student at UMT Lahore. Machine learning, computer vision and LLM apps, each one live.">
+<meta property="og:title" content="Usama Hanif · AI developer">
+<meta property="og:description" content="Machine learning, computer vision and LLM projects you can open and try.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12263F; --ink-soft:#4A5D75; --paper:#F3F5F8; --card:#FFFFFF; --line:#D9E0E8;
+  --aqi:#1BAF7A; --sports:#EB6834; --docu:#7C5CE0; --senti:#C98A00; --budget:#D1608C; --live:#13A36B;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E8EEF5; --ink-soft:#9DB0C6; --paper:#0E1C2E; --card:#152842; --line:#24405F; --senti:#EDA100;
+  }
+}
+:root[data-theme="dark"]{--ink:#E8EEF5; --ink-soft:#9DB0C6; --paper:#0E1C2E; --card:#152842; --line:#24405F; --senti:#EDA100}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--docu);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.05;letter-spacing:-.02em}
+
+/* header */
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.brand{font-family:"Bricolage Grotesque";font-weight:700;font-size:20px;text-decoration:none}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--ink-soft)}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:end;padding:72px 0 64px}
+.hero h1{font-size:clamp(46px,7.4vw,96px);font-weight:800}
+.hero h1 span{display:block;color:var(--ink-soft);font-weight:500}
+.intro{font-size:19px;max-width:620px;margin-top:28px;color:var(--ink-soft)}
+.photo{width:280px;aspect-ratio:4/5;border-radius:140px 140px 18px 18px;overflow:hidden;background:var(--line);display:grid;place-items:center;font:800 64px "Bricolage Grotesque";color:var(--ink-soft)}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+/* the live strip: the one bold thing */
+.live{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.live p{font-size:15px;color:var(--ink-soft);margin-right:6px}
+.pill{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);text-decoration:none;font-weight:500;font-size:15px}
+.pill:hover{border-color:var(--ink)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 0 0 var(--live);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(19,163,107,.55)}70%{box-shadow:0 0 0 9px rgba(19,163,107,0)}100%{box-shadow:0 0 0 0 rgba(19,163,107,0)}}
+
+/* projects */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.sec-title{font-size:clamp(30px,4vw,44px);font-weight:700;margin-bottom:12px}
+.sec-lead{color:var(--ink-soft);max-width:640px;margin-bottom:40px}
+.project{display:grid;grid-template-columns:6px 1fr 300px;gap:0 32px;padding:36px 0;border-bottom:1px solid var(--line)}
+.project:last-child{border-bottom:0}
+.stripe{border-radius:3px;background:var(--c)}
+.project h3{font-size:clamp(26px,3vw,34px);font-weight:700}
+.q{font-size:18px;margin-top:10px;max-width:600px}
+.how{color:var(--ink-soft);margin-top:12px;max-width:600px;font-size:16px}
+.tools{margin-top:16px;font-size:14px;color:var(--ink-soft)}
+.links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-weight:600;font-size:15px}
+.links a{text-decoration:underline;text-decoration-color:var(--c);text-decoration-thickness:2px;text-underline-offset:5px}
+.links a.go{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--c);color:#fff;padding:7px 14px;border-radius:8px}
+.nums{align-self:center;display:grid;gap:18px}
+.num b{display:block;font:800 40px/1 "Bricolage Grotesque";color:var(--c)}
+.num span{font-size:14px;color:var(--ink-soft)}
+.wip{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;border:1px dashed var(--ink-soft);color:var(--ink-soft);margin-left:10px;vertical-align:middle;font-family:"IBM Plex Sans"}
+
+/* research + skills */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+.paper h3{font-size:24px;font-weight:700;margin:6px 0 10px}
+.paper .meta{font-size:14px;color:var(--ink-soft)}
+.skills dt{font-weight:600;margin-top:16px}
+.skills dt:first-child{margin-top:0}
+.skills dd{color:var(--ink-soft)}
+
+/* contact */
+.contact h2{font-size:clamp(34px,5vw,60px);font-weight:800;max-width:780px}
+.contact .links{font-size:17px;margin-top:28px;--c:var(--ink)}
+footer{padding:32px 0 48px;font-size:14px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.theme{background:none;border:1px solid var(--line);color:var(--ink-soft);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:32px}
+  .photo{width:140px;order:-1;font-size:40px}
+  .project{grid-template-columns:5px 1fr;gap:0 20px}
+  .nums{grid-column:2;display:flex;flex-wrap:wrap;gap:24px;margin-top:22px}
+  .two{grid-template-columns:1fr}
+  nav{gap:14px}
+}
+@media (max-width:480px){nav a.hide-sm{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="brand" href="#">Usama Hanif</a>
+  <nav aria-label="Main">
+    <a href="#projects">Projects</a>
+    <a href="#research" class="hide-sm">Research</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>I build AI you can actually open.<span>Not just notebooks.</span></h1>
+    <p class="intro">I'm an AI student at UMT Lahore. I take projects from raw data to a working app: air quality forecasts for Pakistani cities, player tracking from match video, and a chat assistant that answers from your PDFs.</p>
+    <div class="live">
+      <p>Running right now:</p>
+      <a class="pill" href="https://pakistan-aqi-prediction-frhdsrc2ivtubpkdotcau5.streamlit.app/"><span class="dot"></span>AQI Predictor</a>
+      <a class="pill" href="https://docuquery-rag-fpglnj4fz59mxbh5kys5uz.streamlit.app/"><span class="dot"></span>DocuQuery</a>
+      <a class="pill" href="https://pk-footwear-sentiment-analysis-kuphdsqeabs38rt56yt7nm.streamlit.app/"><span class="dot"></span>Brand Sentiment</a>
+      <a class="pill" href="https://pk-footwear-budget-optimizer.streamlit.app/"><span class="dot"></span>Ad Budget Optimizer</a>
+    </div>
+  </div>
+  <div class="photo"><img src="photo.jpg" alt="Usama Hanif" onerror="var p=this.parentNode;p.textContent='UH'"></div>
+</div>
+
+<section id="projects">
+  <h2 class="sec-title">Projects</h2>
+  <p class="sec-lead">Each one started with a question. Here is what I built to answer it, and what came out.</p>
+
+  <article class="project" style="--c:var(--aqi)">
+    <div class="stripe"></div>
+    <div>
+      <h3>Pakistan AQI Prediction</h3>
+      <p class="q">How bad will the air be in Lahore, Karachi or Peshawar next month?</p>
+      <p class="how">I compared classical ML, a neural network and an LSTM on 10 years of monthly data for 10 cities. Gradient boosting won, and SHAP shows smog season and city drive most of the prediction. Written up as a research paper.</p>
+      <p class="tools">Python, scikit-learn, XGBoost, TensorFlow, SHAP, Streamlit</p>
+      <div class="links">
+        <a class="go" href="https://pakistan-aqi-prediction-frhdsrc2ivtubpkdotcau5.streamlit.app/">Open the app</a>
+        <a href="https://doi.org/10.5281/zenodo.22859477">Paper</a>
+        <a href="https://www.kaggle.com/code/usamasadi/pakistan-aqi-prediction-ml-vs-deep-learning-10-c">Kaggle notebook</a>
+        <a href="https://huggingface.co/usamahanif349/pakistan-aqi-predictor">Model</a>
+        <a href="https://github.com/usamahanif349/Pakistan-AQI-Prediction">Code</a>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><b>0.974</b><span>R² on AQI value</span></div>
+      <div class="num"><b>91.7%</b><span>health category accuracy</span></div>
+    </div>
+  </article>
+
+  <article class="project" style="--c:var(--sports)">
+    <div class="stripe"></div>
+    <div>
+      <h3>Sports Vision Tracker</h3>
+      <p class="q">Who ran the most, where did they play, and which team kept the ball?</p>
+      <p class="how">Detects and tracks every player and the ball in match footage, splits players into teams by jersey colour with no manual labels, then draws speed, distance, heatmaps and a live possession bar onto the video.</p>
+      <p class="tools">Python, YOLOv8, BoT-SORT, OpenCV, scikit-learn</p>
+      <div class="links">
+        <a class="go" href="https://github.com/usamahanif349/Sports-vision-tracker">See the demo and code</a>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><b>YOLOv8</b><span>detection</span></div>
+      <div class="num"><b>0 labels</b><span>needed for team split</span></div>
+    </div>
+  </article>
+
+  <article class="project" style="--c:var(--docu)">
+    <div class="stripe"></div>
+    <div>
+      <h3>DocuQuery</h3>
+      <p class="q">Can I ask a stack of PDFs a question and check where the answer came from?</p>
+      <p class="how">Upload PDFs and chat with them. Retrieval mixes vector search with keyword search, a cross-encoder re-ranks the results, and every answer lists the file and page it used.</p>
+      <p class="tools">Python, LangChain, FAISS, BM25, GPT-OSS on Groq, Streamlit</p>
+      <div class="links">
+        <a class="go" href="https://docuquery-rag-fpglnj4fz59mxbh5kys5uz.streamlit.app/">Try it with your PDF</a>
+        <a href="https://github.com/usamahanif349/DocuQuery-RAG">Code</a>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><b>Hybrid</b><span>vector + keyword search</span></div>
+      <div class="num"><b>Page-level</b><span>citations on every answer</span></div>
+    </div>
+  </article>
+
+  <article class="project" style="--c:var(--senti)">
+    <div class="stripe"></div>
+    <div>
+      <h3>Footwear Brand Sentiment</h3>
+      <p class="q">What do customers really say about Borjan, Servis and Ndure?</p>
+      <p class="how">Real YouTube comments and Google reviews in English, Roman Urdu and Urdu, scored with a multilingual transformer and broken down by price, quality, comfort, size and service.</p>
+      <p class="tools">Python, Hugging Face Transformers (XLM-R), scikit-learn, PySpark, Streamlit</p>
+      <div class="links">
+        <a class="go" href="https://pk-footwear-sentiment-analysis-kuphdsqeabs38rt56yt7nm.streamlit.app/">Open the dashboard</a>
+        <a href="https://github.com/usamahanif349/pk-footwear-sentiment-analysis">Code</a>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><b>881</b><span>real comments</span></div>
+      <div class="num"><b>3</b><span>languages</span></div>
+    </div>
+  </article>
+
+  <article class="project" style="--c:var(--budget)">
+    <div class="stripe"></div>
+    <div>
+      <h3>Ad Budget Optimizer</h3>
+      <p class="q">Where should each brand spend its next ad rupee, what should the ad say, and when?</p>
+      <p class="how">Fits diminishing-returns curves per platform and splits the budget to maximise revenue, then turns the plan into ad copy in English and Roman Urdu, a campaign calendar and a downloadable pitch pack. Ad data is simulated; the messaging comes from the real reviews above.</p>
+      <p class="tools">Python, SciPy, PySpark, Hadoop, Plotly, Streamlit</p>
+      <div class="links">
+        <a class="go" href="https://pk-footwear-budget-optimizer.streamlit.app/">Open the dashboard</a>
+        <a href="https://github.com/usamahanif349/pk-footwear-budget-optimizer">Code</a>
+        <a href="https://github.com/usamahanif349/big-data-analytics-course">All Big Data projects</a>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><b>99.8%</b><span>of best revenue in a simulated test</span></div>
+      <div class="num"><b>5</b><span>ad platforms</span></div>
+    </div>
+  </article>
+
+  <article class="project" style="--c:var(--ink-soft)">
+    <div class="stripe"></div>
+    <div>
+      <h3>Deepfake Detection <span class="wip">In progress</span></h3>
+      <p class="q">Can we tell when a face or video has been faked?</p>
+      <p class="how">My final year project, built with my group over the next months. Updates will land here.</p>
+    </div>
+  </article>
+</section>
+
+<section id="research">
+  <div class="two">
+    <div>
+      <h2 class="sec-title">Research</h2>
+      <div class="paper">
+        <p class="meta">Paper · archived on Zenodo</p>
+        <h3>Pakistan AQI Prediction: A Comparative Study of Machine Learning and Deep Learning Approaches</h3>
+        <p class="meta">Usama Hanif</p>
+        <div class="links" style="--c:var(--aqi)">
+          <a href="https://doi.org/10.5281/zenodo.22859477">Read the paper (DOI)</a>
+          <a href="https://orcid.org/0009-0001-8811-4058">ORCID profile</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="sec-title">Skills</h2>
+      <dl class="skills">
+        <dt>Machine learning</dt><dd>scikit-learn, XGBoost, TensorFlow, SHAP</dd>
+        <dt>Computer vision</dt><dd>YOLOv8, OpenCV, object tracking</dd>
+        <dt>LLMs and NLP</dt><dd>LangChain, FAISS, RAG, Hugging Face Transformers</dd>
+        <dt>Data and big data</dt><dd>Pandas, SQL, PySpark, Hadoop</dd>
+        <dt>Building apps</dt><dd>Streamlit, Plotly, Git, Python, C++</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Looking for an intern who ships? Let's talk.</h2>
+  <div class="links">
+    <a href="mailto:usamahanif349@gmail.com">usamahanif349@gmail.com</a>
+    <a href="https://www.linkedin.com/in/usama-hanif-8956bb1b0/">LinkedIn</a>
+    <a href="https://github.com/usamahanif349">GitHub</a>
+    <a href="https://www.kaggle.com/usamasadi">Kaggle</a>
+    <a href="https://huggingface.co/usamahanif349">Hugging Face</a>
+  </div>
+</section>
+
+<footer>
+  <span>Usama Hanif · BS Artificial Intelligence, UMT Lahore</span>
+  <button class="theme" type="button" id="theme">Switch theme</button>
+</footer>
+
+</div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
